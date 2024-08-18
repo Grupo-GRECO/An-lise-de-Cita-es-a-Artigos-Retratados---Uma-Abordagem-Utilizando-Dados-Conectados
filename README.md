@@ -28,7 +28,7 @@ Os artigos retratados sobre COVID-19 foram obtidos em  ***11/07/2024*** e as inf
 * [CiTo](https://sparontologies.github.io/cito/current/cito.html#d4e1176)
 * [c4o](https://sparontologies.github.io/c4o/current/c4o.html)
 
-## Arquivos no Repositório
+## Pastas no Repositório
 
 * [**GRAPHML**](GRAPHML): Contém os dados da primeira análise, feita com técnicas de ARS
     * **dataset_generator.py**: Python script to create dataset
