@@ -39,6 +39,8 @@ with open('./retracted11-07-2024.json') as json_file:
       testwritefile.write("@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n")
       testwritefile.write("@prefix doi: <http://prismstandard.org/namespaces/basic/2.0/doi#> .\n")
       testwritefile.write("@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .  \n")
+      testwritefile.write("@prefix greco: <http://www.greco.ufrj.br/> .  \n")
+
 
 
 
@@ -80,10 +82,10 @@ with open('./retracted11-07-2024.json') as json_file:
           testwritefile.write("\t prism:publicationDate    \""+str(publication_date)+"\"^^xsd:date  ; \n")
           testwritefile.write("\t dc:abstract   \""+escape(str(paper['abstract'])).replace('"', '').replace('\n', '') +"\"@en-us  ; \n")
           testwritefile.write("\t dc:title   \""+escape(str(paper['title'])).replace('"', '').replace('\n', '') +"\"@en-us  ; \n")
-          testwritefile.write("\t fabio:hasRetractionType   \""+escape(str(artigo['kind'])) +"\"@en-us  ; \n") #substitui o fabio:Report por hasRetractionType fazendo uma extensão da ontologia
+          testwritefile.write("\t greco:hasRetractionType   \""+escape(str(artigo['kind'])) +"\"@en-us  ; \n") #substitui o fabio:Report por hasRetractionType fazendo uma extensão da ontologia
           testwritefile.write("\t rdfs:label   \""+escape(str(paper['title'])).replace('"', '').replace('\n', '') +"\"@en-us  ; \n")
           testwritefile.write("\t dc:publisher   \""+escape(str(paper['venue']).replace('"', '')) +"\"@en-us  ; \n")
-          testwritefile.write("\t fabio:hasProjectMetadata \""+escape(str(artigo['Institution'])).replace('"', '').replace('\n', '') +"\"@en-us  ; \n") #cria a propriedade hasprojectMetadata
+          testwritefile.write("\t greco:hasProjectMetadata \""+escape(str(artigo['Institution'])).replace('"', '').replace('\n', '') +"\"@en-us  ; \n") #cria a propriedade hasprojectMetadata
 
 
           for autor in paper['authors'] :
